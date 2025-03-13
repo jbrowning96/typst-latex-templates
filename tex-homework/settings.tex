@@ -1,0 +1,88 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Include packages here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{stmaryrd}
+\usepackage{amsfonts}
+\usepackage{mathpazo}
+\usepackage{eulervm}
+\usepackage{amsmath,mathtools}
+\usepackage{fullpage}
+\usepackage{amsthm}
+\usepackage{thmtools}
+\usepackage{enumerate}
+\usepackage{tikz-cd}
+\usepackage{xcolor}
+\usepackage{latexsym}
+\usepackage{url}
+\usepackage{rotating}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{accents}
+\usepackage{amssymb}
+\usepackage{
+hyperref,%\autoref
+% n.b. \Autoref is defined by thmtools
+cleveref,% \cref
+% n.b. cleveref after! hyperref
+}
+\usepackage{thm-restate}
+
+\usepackage{kantlipsum} %comment this out
+
+
+
+\renewcommand\qedsymbol{$\square$}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Defining question environment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{definition}
+
+\newtheorem{question}{Question}[section]
+\newtheorem*{claim}{Claim}
+\newtheorem*{solution}{Solution}
+\newtheorem{lem}{Lemma}[section]
+\newtheorem{prop}{Proposition}[section]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Common math symbols
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\mbb}{\mathbb}
+\newcommand{\mcal}{\mathcal}
+\newcommand{\mscr}{\mathscr}
+\newcommand{\mfrak}{\mathfrak}
+
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\ILT}{ILT}
+\DeclareMathOperator{\LT}{LT}
+\DeclareMathOperator{\img}{Img}
+\DeclareMathOperator{\divides}{\mathrel{|}}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Fix}{Fix}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+\newcommand{\contradiction}[1]{\Rightarrow\!\Leftarrow}
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+
+\pagestyle{plain}
+\setlength{\headheight}{40pt}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\noi}{\noindent}
+
+
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{%
+  \par\pushQED{\qed}\normalfont%
+  \topsep6\p@\@plus6\p@\relax
+  \trivlist\item[\hskip\labelsep\bfseries#1\@addpunct{:}]%
+  \ignorespaces
+}{%
+  \popQED\endtrivlist\@endpefalse
+}
+\makeatother
